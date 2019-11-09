@@ -24,10 +24,28 @@
 
             <!-- 文件列表 -->
             <el-main style="padding: 0 0 0 13px;">
-                <div class="main_box" ></div>
+                <el-container class="main_box" >
+                  <el-main>
+                      <div class="file_box"
+                           v-for="file in fileList"
+                           :key="file.id"
+                           @click="chooseFile(file.url)">
+                          <p><img class="file_icon" :src="require('../assets/'+file.type+'.png')"/> {{file.name}} </p>
+                      </div>
 
+                  </el-main>
+                    <el-footer style="text-align: center">
+                        <el-pagination
+                                layout="prev, pager, next"
+                                :current-page.sync="currentPage"
+                                :total="fileTotal"
+                                @current-change="handleCurrentChange">
+                        </el-pagination>
+                    </el-footer>
+                </el-container>
             </el-main>
         </el-container>
+
     </div>
 </template>
 
@@ -62,7 +80,8 @@
         ],
         dirList:[],
         fileList:[],
-        currentPage:1,
+        fileTotal:-1,
+        currentPage:-1,
         activeDir:-1,
       }
     },
@@ -72,6 +91,7 @@
           this.showFile = false
         } else {
           this.showFile = true
+          this.currentPage = 1
           for (let i = 0; i<this.titleList.length; i++) {
             if(this.$route.params.index === this.titleList[i].index) {
               this.nowTitle = this.titleList[i]
@@ -92,10 +112,11 @@
               if(res.data.data.records[0].type === 'dir') {
                 this.dirList = res.data.data.records
                 this.activeDir = this.dirList[0].id
-                this.getFileList()
+                this.getFileList(1)
               } else {
                 this.dirList = null
                 this.fileList = res.data.data.records
+                this.fileTotal = res.data.data.total
               }
             } else {
               this.dirList = null
@@ -103,21 +124,33 @@
             }
           })
       },
-      getFileList() {
+      getFileList(currentPage) {
+        let parentId = this.activeDir
+        if(this.nowTitle.id === 1 || this.nowTitle.id === 3) {
+          parentId = this.nowTitle.id
+        }
         this.$axios.get('/api/node/list',{
           params:{
-            parentId : this.activeDir,
-            current: this.currentPage,
+            parentId : parentId,
+            current: currentPage,
             size:8
           }})
           .then( (res) => {
             console.log(res)
             this.fileList =  res.data.data.records;
+            this.fileTotal = res.data.data.total
           })
       },
       chooseDir(value) {
         this.activeDir = value
-        this.getFileList()
+        this.currentPage = 1
+        this.getFileList(this.currentPage)
+      },
+      chooseFile(value) {
+
+      },
+      handleCurrentChange(val) {
+        this.getFileList(val)
       },
     },
     mounted() {
@@ -126,7 +159,7 @@
     watch:{
       '$route' () {
         this.init()
-        this.getDirList()
+        this.currentPage = 1
       }
 
     }
@@ -171,6 +204,27 @@
         height: 100%;
         background: white;
         border-radius: 2px;
+    }
+    .file_box {
+        padding: 1px 0;
+    }
+    .file_box:hover {
+        cursor: pointer;
+    }
+    .file_box p:hover {
+        color: #000;
+        font-weight: 400;
+    }
+    .file_box p{
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        color: rgba(87, 87, 87, 0.91);
+    }
+    .file_icon {
+        height: 20px;
+        line-height: 20px;
+        margin-right: 4px;
     }
 
 </style>
