@@ -4,17 +4,28 @@
         <el-main class="review_main">
               <el-row type="flex" justify="space-between" class="review_head">
                   <span class="file_name" :title="this.name">{{this.name}}</span>
-                  <el-button icon="el-icon-back" size="small" @click="back" type="text">返回</el-button>
+                  <span>
+                  <el-button  size="small" icon="el-icon-download" type="primary" @click="download_file">下载</el-button>
+                  <el-button icon="el-icon-back" size="small" @click="back" type="danger">返回</el-button>
+                  </span>
                   </el-row>
               <el-row class="review_window">
-              <iframe
+              <!-- <iframe
                 v-if="isOffice[this.type]"
                 :src="'https://view.officeapps.live.com/op/view.aspx?src='+this.url"                
                 width="100%"
                 height="100%"
                 frameborder="1"
+              ></iframe> -->
+               <!-- 公共服务，需要改进 -->
+                <iframe
+                v-if="isOffice[this.type]"
+                :src="'https://file.keking.cn/onlinePreview?url='+this.url"                
+                width="100%"
+                height="100%"
+                frameborder="1"
               ></iframe>
-              
+            
             <embed
               v-if="!isOffice[this.type]"
               :src="this.url"
@@ -60,6 +71,12 @@
         console.log(this.url)
     },
     methods:{
+        download_file() {
+             console.log("doww")
+            // window.open(this.url)
+            download(this.url)
+
+        }
     },
 
   };
