@@ -38,7 +38,8 @@
       <!-- 尾部版权设定 -->
       <el-footer>
         <div class="footer">
-          <p>111111</p>
+          <p class="copyright">金陵科技学院土木工程系倾力打造的教学资料分享平台， 学生可通过该平台浏览主干课程并下载习题库</p>
+          <p class="copyright">©金陵科技学院土木工程，转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源 </p>
         </div>
       </el-footer>
     </el-container>
@@ -95,6 +96,12 @@ export default {
   }
 
   .footer {
-
+    border-top: 1px solid #929292;
+  }
+  .copyright {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 5px;
+    color: rgba(0, 0, 0, 0.45);
   }
 </style>
