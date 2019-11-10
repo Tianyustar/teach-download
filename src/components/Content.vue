@@ -24,12 +24,12 @@
 
             <!-- 文件列表 -->
             <el-main style="padding: 0 0 0 13px;">
-                <el-container class="main_box" >
+                <el-container class="main_box" v-if="!reviewPage">
                   <el-main>
                       <div class="file_box"
                            v-for="file in fileList"
                            :key="file.id"
-                           @click="chooseFile(file.url)">
+                           @click="chooseFile(file.url, file.type,file.name)">
                           <p><img class="file_icon" :src="require('../assets/'+file.type+'.png')"/> {{file.name}} </p>
                       </div>
 
@@ -43,6 +43,9 @@
                         </el-pagination>
                     </el-footer>
                 </el-container>
+                <el-container class="main_box" v-if="reviewPage">
+                             <Review :url="this.fileUrl" :type="fileType" :name="this.fileName" :back="handleback"></Review>
+                </el-container>
             </el-main>
         </el-container>
 
@@ -50,11 +53,16 @@
 </template>
 
 <script>
+import Review from './Review'
   export default {
     name: "Content",
+    components: {
+      Review
+    },
     data() {
       return {
         showFile:false,
+        reviewPage:false,
         nowTitle:{ },
         titleList:[
           {
@@ -83,14 +91,20 @@
         fileTotal:-1,
         currentPage:-1,
         activeDir:-1,
+        fileUrl:"",
+        fileType:"",
+        fileName:""
       }
     },
     methods:{
+
       init() {
         if(this.$route.path === '/') {
           this.showFile = false
+          this.reviewPage = false 
         } else {
           this.showFile = true
+          this.reviewPage = false // 默认显示文件列表
           this.currentPage = 1
           for (let i = 0; i<this.titleList.length; i++) {
             if(this.$route.params.index === this.titleList[i].index) {
@@ -144,13 +158,21 @@
       chooseDir(value) {
         this.activeDir = value
         this.currentPage = 1
+        this.reviewPage = false // 默认显示文件列表， lyx mod 11.10
         this.getFileList(this.currentPage)
       },
-      chooseFile(value) {
+      chooseFile(value, type, name) {
+       this.fileUrl = value;
+       this.fileType = type;
+       this.fileName = name;
+       this.reviewPage = true;
 
       },
       handleCurrentChange(val) {
         this.getFileList(val)
+      },
+      handleback(){
+        this.reviewPage = false;
       },
     },
     mounted() {
