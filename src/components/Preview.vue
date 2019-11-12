@@ -10,17 +10,17 @@
         </span>
       </el-row>
       <el-row class="review_window">
-        <!-- <iframe
-                v-if="isOffice[this.type]"
-                :src="'https://view.officeapps.live.com/op/view.aspx?src='+this.url"                
-                width="100%"
-                height="100%"
-                frameborder="1"
-        ></iframe>-->
+        <iframe
+          v-if="isOffice[this.type] && this.type == 'doc'"
+          :src="'https://view.officeapps.live.com/op/view.aspx?src='+this.url"
+          width="100%"
+          height="100%"
+          frameborder="1"
+        ></iframe>
         <!-- 公共服务，需要改进 -->
         <iframe
           class="iframe_preview"
-          v-if="isOffice[this.type]"
+          v-if="isOffice[this.type]  && this.type == 'ppt'"
           :src="'http://120.77.155.191:8012/onlinePreview?url='+this.url"
           width="100%"
           height="100%"
@@ -63,7 +63,8 @@ export default {
   },
   data() {
     return {
-      isOffice: { 'doc': true, 'ppt': true, 'pdf': false }
+      isOffice: { 'doc': true, 'ppt': true, 'pdf': false },
+      isDoc: { 'doc': true }
     }
   },
   mounted() {
@@ -103,6 +104,9 @@ export default {
   margin-bottom: 10px;
 }
 .iframe_preview {
+  border: none;
+}
+iframe {
   border: none;
 }
 </style>
