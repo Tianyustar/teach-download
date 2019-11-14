@@ -37,10 +37,28 @@
 
       <!-- 尾部版权设定 -->
       <el-footer>
-        <div class="footer">
-          <p class="copyright">金陵科技学院土木工程系倾力打造的教学资料分享平台， 学生可通过该平台浏览主干课程并下载习题库</p>
-          <p class="copyright">©金陵科技学院土木工程，转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源 </p>
-        </div>
+        <el-row class="footer">
+          <el-col span="12">
+            <p class="copyright">金陵科技学院土木工程系倾力打造的教学资料分享平台， 学生可通过该平台浏览主干课程并下载习题库</p>
+            <p class="copyright">©金陵科技学院土木工程，转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源 </p>
+          </el-col>
+          <el-col :span="12">
+            <p class="link">友情链接：
+              <a href="http://jg.jit.edu.cn/">建工学院网站</a>
+            </p>
+            <p class="link">
+
+              校级精品课程：
+              <a href="http://jg.jit.edu.cn/info/1084/1694.htm">基础工程</a> |
+              <a href="http://jg.jit.edu.cn/info/1084/1695.htm">工程地质</a> |
+              <a href="http://jg.jit.edu.cn/info/1084/1696.htm">土木工程材料</a>
+            </p>
+            <p class="link">校级研究性课程：
+              <a href="http://jg.jit.edu.cn/info/1085/1702.htm">混凝土结构与砌体结构设计</a> |
+              <a href="http://jg.jit.edu.cn/info/1085/1703.htm">混凝土结构设计原理</a>
+            </p>
+          </el-col>
+        </el-row>
       </el-footer>
     </el-container>
 
@@ -99,9 +117,22 @@ export default {
     border-top: 1px solid #929292;
   }
   .copyright {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 10px;
+    line-height: 10px;
     margin: 5px;
     color: rgba(0, 0, 0, 0.45);
+  }
+  .link {
+    font-size: 10px;
+    line-height: 10px;
+    margin: 5px;
+    color: rgba(0, 0, 0, 0.45);
+    /*text-align: center;*/
+  }
+  .link a {
+    text-decoration: none;
+  }
+  .link a:link {
+    color: #3e5ba0
   }
 </style>
