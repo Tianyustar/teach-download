@@ -58,6 +58,7 @@
                 <div class="card_list">
                   <li>BIM软件资料</li>
                   <li>PKPM软件资料</li>
+                  <li>ANSYS软件学习资料</li>
                 </div>
               </div>
             </el-col>
