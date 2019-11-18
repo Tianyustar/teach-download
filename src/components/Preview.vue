@@ -41,6 +41,8 @@
 </template>
 
 <script>
+
+import { saveAs } from 'file-saver'
 export default {
   name: "Content",
   props: {
@@ -75,11 +77,12 @@ export default {
       console.log("doww")
       // window.open(this.url)
       // download(this.url)
-      var form = document.createElement('form')
-      form.setAttribute('method', 'get')
-      form.setAttribute('action', this.url)
-      document.body.append(form)
-      form.submit()
+      // var form = document.createElement('form')
+      // form.setAttribute('method', 'get')
+      // form.setAttribute('action', this.url)
+      // document.body.append(form)
+      // form.submit()
+      saveAs(this.url, this.name)
 
     }
   },
