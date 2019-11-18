@@ -289,15 +289,16 @@ export default {
   background: #38508e;
 }
 .title_style {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: 400;
   color: white;
   text-align: center;
 }
 
 .dir_text p {
-  font-size: 14px;
-  padding: 2px 3px;
+  font-size: 15px;
+  padding: 2px 0;
 }
 .dir_text:hover {
   cursor: pointer;
@@ -344,9 +345,10 @@ export default {
   border-radius: 3px;
 }
 .homepage_p {
-  font-size: 13px;
+  font-size: 15px;
   color: #333333;
   text-indent: 2em;
+  line-height: 22px;
 }
 .homepage_card {
   height: 50%;
@@ -362,14 +364,14 @@ export default {
 .card_head {
   padding: 2px 10px;
   height: 40px;
-  font-size: 13px;
+  font-size: 15px;
   background: rgb(56, 80, 142);
   color: rgba(255, 255, 255, 0.87);
   line-height: 40px;
 }
 .card_list li {
   list-style: none;
-  font-size: 12px;
+  font-size: 14px;
   margin: 4px 10px;
   max-height: 100px;
 }

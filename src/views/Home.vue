@@ -38,11 +38,11 @@
       <!-- 尾部版权设定 -->
       <el-footer>
         <el-row class="footer">
-          <el-col :span="12">
+          <el-col :span="14">
             <p class="copyright">金陵科技学院土木工程系倾力打造的教学资料分享平台， 学生可通过该平台浏览主干课程并下载习题库</p>
             <p class="copyright">©金陵科技学院土木工程，转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源</p>
           </el-col>
-          <el-col :span="12">
+          <el-col :span="10">
             <p class="link">
               友情链接：
               <a href="http://jg.jit.edu.cn/">建工学院网站</a>
@@ -93,8 +93,10 @@ export default {
   padding-left: 10px;
 }
 .el-menu-item {
-  height: 40px;
-  line-height: 40px;
+  height: 45px;
+  line-height: 45px;
+    font-size: 18px;
+    font-weight: 700;
 }
 .whole_page {
   height: 100%;
@@ -106,25 +108,25 @@ export default {
 .head_title {
   color: #38508e;
   color: rgba(240, 240, 240, 0.78);
-  font-size: 1.7em;
-  height: 26px;
+  font-size: 2em;
+  height: 20px;
 }
 .menu_style {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .footer {
   border-top: 1px solid #929292;
 }
 .copyright {
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 13px;
+  line-height: 13px;
   margin: 5px;
   color: rgba(0, 0, 0, 0.45);
 }
 .link {
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 13px;
+  line-height: 13px;
   margin: 5px;
   color: rgba(0, 0, 0, 0.45);
   /*text-align: center;*/
