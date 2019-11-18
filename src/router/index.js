@@ -13,10 +13,10 @@ const routes = [
     name: "home",
     component: () => import("../views/Home.vue"),
 
-    children:[
+    children: [
       {
         path: "/home",
-        redirect:'/',
+        redirect: '/',
       },
       {
         path: "/content/:index",
@@ -33,7 +33,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  // mode: "history",
   base: process.env.BASE_URL,
   routes
 });

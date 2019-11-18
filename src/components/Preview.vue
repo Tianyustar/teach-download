@@ -74,7 +74,12 @@ export default {
     download_file() {
       console.log("doww")
       // window.open(this.url)
-      download(this.url)
+      // download(this.url)
+      var form = document.createElement('form')
+      form.setAttribute('method', 'get')
+      form.setAttribute('action', this.url)
+      document.body.append(form)
+      form.submit()
 
     }
   },

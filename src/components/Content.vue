@@ -2,74 +2,68 @@
   <div class="whole_page">
     <!-- 首页 -->
     <el-container v-if="!showFile" style="height: 100%">
-        <el-row class="homepage_box">
-            <el-col :span="12" style="padding: 30px 20px; height: 100%;">
-                <img src="../assets/jit.jpg" style="width: 100%;"/>
-                <p class="homepage_p">土木工程围绕工程结构服役安全评估与性能提升、绿色建筑技术与虚拟仿真、交通工程全寿命期性能监测与安全三个学科方向进行建设。工程结构服役安全评估与性能提升方向围绕土木工程结构的健康监测、检测与性能评估。运用软件技术（无线智能传感）对各种土木工程进行损伤/无损检测，并研究开发土木工程结构的鉴定、修复与加固等技术对服役工程结构进行性能提升。</p>
+      <el-row class="homepage_box">
+        <el-col :span="12" style="padding: 30px 20px; height: 100%;">
+          <img src="../assets/jit.jpg" style="width: 100%;" />
+          <p class="homepage_p">
+            金陵科技学院土木工程网络教学平台主要是为土木工程专业
+            的教师和学生服务,对土木工程专业的主干课程的课程介绍、课件、习题库、软件类课程的教学资源进行细化整合，
+            为本专业学生的学习提供一个自主学习的平台，便于学生通过自主研学获取知识，激发学生自主学习的热情，培养学生利用信息技术的意识和能力，锻炼学生分析问题解决问题的能力，促进信息技术与专业课程的整合。
+          </p>
 
-                <p class="homepage_p">绿色建筑技术与虚拟仿真方向通过BIM等软件分析技术，对绿色建筑全寿命周期进行研究评价。注重绿色建筑材料的开发与研究，注重绿色建筑技术、施工组织技术以及运营管理的研究。</p>
-            </el-col>
+          <!-- <p class="homepage_p">绿色建筑技术与虚拟仿真方向通过BIM等软件分析技术，对绿色建筑全寿命周期进行研究评价。注重绿色建筑材料的开发与研究，注重绿色建筑技术、施工组织技术以及运营管理的研究。</p> -->
+        </el-col>
 
-            <el-col :span="12"  style="padding: 30px 20px; height: 100%;">
-                <el-row style="height: 100%;">
-                    <el-col :span="12" class="homepage_card">
-                        <div class="card_box">
-                            <div class="card_head">
-                                课程介绍
-                            </div>
-                            <div class="card_list">
-                                <li>画法几何与工程制图课程介绍</li>
-                                <li>理论力学课程介绍</li>
-                                <li>材料力学课程介绍</li>
-                                <li>结构力学课程介绍</li>
-                                <li>土力学课程介绍</li>
-                            </div>
-                        </div>
-                    </el-col>
-                    <el-col :span="12" class="homepage_card">
-                        <div class="card_box">
-                            <div class="card_head">
-                                教学课件
-                            </div>
-                            <div class="card_list">
-                                <li>土木工程软件应用</li>
-                                <li>基础工程</li>
-                                <li>建筑结构抗震</li>
-                                <li>材料力学</li>
-                                <li>混凝土结构设计原理</li>
-                            </div>
-                        </div>
-                    </el-col>
-                    <el-col :span="12" class="homepage_card">
-                        <div class="card_box">
-                            <div class="card_head">
-                                习题库
-                            </div>
-                            <div class="card_list">
-                                <li>土力学思考与习题</li>
-                                <li>土木工程施工习题</li>
-                                <li>土木工程软件应用习题</li>
-                                <li>工程测量习题</li>
-                                <li>建筑结构抗震习题</li>
-                            </div>
-                        </div>
-                    </el-col>
-                    <el-col :span="12" class="homepage_card">
-                        <div class="card_box">
-                            <div class="card_head">
-                                软件参考资料
-                            </div>
-                            <div class="card_list">
-                                <li>BIM软件资料</li>
-                                <li>PKPM软件资料</li>
-                            </div>
-                        </div>
-                    </el-col>
-                </el-row>
+        <el-col :span="12" style="padding: 30px 20px; height: 100%;">
+          <el-row style="height: 100%;">
+            <el-col :span="12" class="homepage_card">
+              <div class="card_box">
+                <div class="card_head">课程介绍</div>
+                <div class="card_list">
+                  <li>画法几何与工程制图课程介绍</li>
+                  <li>理论力学课程介绍</li>
+                  <li>材料力学课程介绍</li>
+                  <li>结构力学课程介绍</li>
+                  <li>土力学课程介绍</li>
+                </div>
+              </div>
             </el-col>
-        </el-row>
-        
-        
+            <el-col :span="12" class="homepage_card">
+              <div class="card_box">
+                <div class="card_head">教学课件</div>
+                <div class="card_list">
+                  <li>土木工程软件应用</li>
+                  <li>基础工程</li>
+                  <li>建筑结构抗震</li>
+                  <li>材料力学</li>
+                  <li>混凝土结构设计原理</li>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="12" class="homepage_card">
+              <div class="card_box">
+                <div class="card_head">习题库</div>
+                <div class="card_list">
+                  <li>土力学思考与习题</li>
+                  <li>土木工程施工习题</li>
+                  <li>土木工程软件应用习题</li>
+                  <li>工程测量习题</li>
+                  <li>建筑结构抗震习题</li>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="12" class="homepage_card">
+              <div class="card_box">
+                <div class="card_head">软件参考资料</div>
+                <div class="card_list">
+                  <li>BIM软件资料</li>
+                  <li>PKPM软件资料</li>
+                </div>
+              </div>
+            </el-col>
+          </el-row>
+        </el-col>
+      </el-row>
     </el-container>
 
     <!-- 文件预览及下载 -->
@@ -131,9 +125,9 @@
 
 <script>
 import Preview from './Preview'
-var localJs = document.createElement('script');
-localJs.setAttribute('src', "./download.js");
-document.head.appendChild(localJs);
+// var localJs = document.createElement('script');
+// localJs.setAttribute('src', "./download.js");
+// document.head.appendChild(localJs);
 export default {
   name: "Content",
   components: {
@@ -174,7 +168,7 @@ export default {
       fileUrl: "",
       fileType: "",
       fileName: "",
-      loadingFile:false,
+      loadingFile: false,
     }
   },
   methods: {
@@ -341,41 +335,41 @@ export default {
   line-height: 20px;
   margin-right: 4px;
 }
-    /* 首页 */
-    .homepage_box {
-        height: 100% ;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.26);
-        border-radius: 3px;
-    }
-    .homepage_p {
-        font-size: 13px;
-        color: #333333;
-        text-indent:2em;
-    }
-    .homepage_card {
-        height: 50%;
-        padding: 0 15px;
-    }
-    .card_box {
-        background: rgba(255,255,255,0.50);
-        box-shadow: 2px 2px 2px #787878;
-        border-radius: 3px;
-        height: 90%;
-        overflow: hidden;
-    }
-    .card_head {
-        padding: 2px 10px;
-        height: 40px;
-        font-size: 13px;
-        background: rgb(56, 80, 142);
-        color: rgba(255, 255, 255, 0.87);
-        line-height: 40px;
-    }
-    .card_list li {
-        list-style: none;
-        font-size: 12px;
-        margin: 4px 10px;
-        max-height: 100px;
-    }
+/* 首页 */
+.homepage_box {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 3px;
+}
+.homepage_p {
+  font-size: 13px;
+  color: #333333;
+  text-indent: 2em;
+}
+.homepage_card {
+  height: 50%;
+  padding: 0 15px;
+}
+.card_box {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 2px 2px #787878;
+  border-radius: 3px;
+  height: 90%;
+  overflow: hidden;
+}
+.card_head {
+  padding: 2px 10px;
+  height: 40px;
+  font-size: 13px;
+  background: rgb(56, 80, 142);
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 40px;
+}
+.card_list li {
+  list-style: none;
+  font-size: 12px;
+  margin: 4px 10px;
+  max-height: 100px;
+}
 </style>
