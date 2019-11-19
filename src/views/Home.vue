@@ -5,8 +5,7 @@
       <el-header>
         <el-row class="header">
           <el-col :span="12">
-            <p class="head_title">土木工程网络教学资源平台
-</p>
+            <p class="head_title">土木工程网络教学资源平台</p>
           </el-col>
           <el-col :span="24">
             <el-menu
@@ -95,8 +94,8 @@ export default {
 .el-menu-item {
   height: 45px;
   line-height: 45px;
-    font-size: 18px;
-    font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 }
 .whole_page {
   height: 100%;
@@ -119,16 +118,16 @@ export default {
   border-top: 1px solid #929292;
 }
 .copyright {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 13px;
   margin: 5px;
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(0, 0, 0, 0.8);
 }
 .link {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 13px;
   margin: 5px;
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(0, 0, 0, 0.8);
   /*text-align: center;*/
 }
 .link a {

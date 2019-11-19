@@ -6,9 +6,11 @@
         <el-col :span="12" style="padding: 30px 20px; height: 100%;">
           <img src="../assets/jit.jpg" style="width: 100%;" />
           <p class="homepage_p">
-            金陵科技学院土木工程网络教学平台主要是为土木工程专业
-            的教师和学生服务,对土木工程专业的主干课程的课程介绍、课件、习题库、软件类课程的教学资源进行细化整合，
-            为本专业学生的学习提供一个自主学习的平台，便于学生通过自主研学获取知识，激发学生自主学习的热情，培养学生利用信息技术的意识和能力，锻炼学生分析问题解决问题的能力，促进信息技术与专业课程的整合。
+            <strong>
+              金陵科技学院土木工程网络教学平台主要是为土木工程专业
+              的教师和学生服务,对土木工程专业的主干课程的课程介绍、课件、习题库、软件类课程的教学资源进行细化整合，
+              为本专业学生的学习提供一个自主学习的平台，便于学生通过自主研学获取知识，激发学生自主学习的热情，培养学生利用信息技术的意识和能力，锻炼学生分析问题解决问题的能力，促进信息技术与专业课程的整合。
+            </strong>
           </p>
 
           <!-- <p class="homepage_p">绿色建筑技术与虚拟仿真方向通过BIM等软件分析技术，对绿色建筑全寿命周期进行研究评价。注重绿色建筑材料的开发与研究，注重绿色建筑技术、施工组织技术以及运营管理的研究。</p> -->
@@ -297,14 +299,14 @@ export default {
 }
 
 .dir_text p {
-  font-size: 15px;
+  font-size: 17px;
   padding: 2px 0;
 }
 .dir_text:hover {
   cursor: pointer;
 }
 .dir_active p {
-  font-size: 14px;
+  font-size: 16px;
   background: rgba(62, 91, 160, 0.82);
   border-radius: 2px;
   padding: 2px 3px;
@@ -329,7 +331,7 @@ export default {
 .file_box p {
   height: 20px;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(87, 87, 87, 0.91);
 }
 .file_icon {
@@ -345,10 +347,10 @@ export default {
   border-radius: 3px;
 }
 .homepage_p {
-  font-size: 15px;
-  color: #333333;
+  font-size: 17px;
+  color: #222233;
   text-indent: 2em;
-  line-height: 22px;
+  line-height: 30px;
 }
 .homepage_card {
   height: 50%;
@@ -364,14 +366,14 @@ export default {
 .card_head {
   padding: 2px 10px;
   height: 40px;
-  font-size: 15px;
+  font-size: 17px;
   background: rgb(56, 80, 142);
   color: rgba(255, 255, 255, 0.87);
   line-height: 40px;
 }
 .card_list li {
   list-style: none;
-  font-size: 14px;
+  font-size: 16px;
   margin: 4px 10px;
   max-height: 100px;
 }
