@@ -72,7 +72,7 @@
     <!-- 文件预览及下载 -->
     <el-container v-if="showFile" style="height: 100%">
       <!-- 侧边子模块 -->
-      <el-aside class="aside_info" width="180px">
+      <el-aside class="aside_info" width="200px">
         <el-container style="height: 100%;">
           <el-header class="aside_title" height="45px">
             <p class="title_style">
